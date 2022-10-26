@@ -1,6 +1,5 @@
 var pokeName = document.getElementById("pokeName");
 let pokeImg = document.getElementById("img");
-let btn = document.getElementById('btnClick');
 
 let randomID;
 
@@ -14,9 +13,9 @@ async function getPokemon() {
     pokeImg.src = data.sprites.front_default;
 
 }
-
-getPokemon()
 // getData().then(data => pokeName.innerHTML = data.name);
 
 // getData().then(data => pokeImg.src = data.sprites.front_default);
 
+const element = document.getElementById("btnClick");
+element.addEventListener("click", getPokemon);
